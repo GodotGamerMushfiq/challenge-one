@@ -13,4 +13,5 @@ func _ready():
 
 func _on_Danger_body_entered(body):
 	GlobalSignal.emit_signal("danger_score")
+	GlobalSignal.emit_signal("danger_score_2")
 	queue_free()
