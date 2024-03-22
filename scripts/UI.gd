@@ -31,7 +31,7 @@ func _danger_score_2():
 
 func _danger_score():
 	score_count -= 1
-	$p1_Label.text = "Score :" + str(score_count) 
+	$p1_Label.text = "P1 :" + str(score_count) 
 
 func _on_CountDownTimer_timeout():
 	countdown_time -= 1

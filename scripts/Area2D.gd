@@ -10,6 +10,9 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	GlobalSignal.emit_signal("change_score")
-	GlobalSignal.emit_signal("change_score_2")
-	queue_free()
+	if body.is_in_group("player1"):
+		GlobalSignal.emit_signal("change_score") 
+		queue_free()
+	if body.is_in_group("player2"):
+		GlobalSignal.emit_signal("change_score_2")
+		queue_free()
